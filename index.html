@@ -92,7 +92,9 @@ var linker = new DeepLinker({
     console.log('browser failed to respond to the deep link');
   },
   onFallback: function() {
-    url = 'https://apps.apple.com/us/app/philov/id1499945979';
+    window.location.href = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/id1670566885';
+    url = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/id1670566885';
+    console.log('url')
   },
   onReturn: function() {
     console.log('user returned to the page from the native app');
@@ -100,4 +102,4 @@ var linker = new DeepLinker({
 });
 
 linker.openURL(url);
-</script>
+</script
