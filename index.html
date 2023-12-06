@@ -91,6 +91,7 @@ var app_store_link = 'https://play.google.com/store/apps/details?id=com.withcent
 var linker = new DeepLinker({
   onIgnored: function() {
     console.log('browser failed to respond to the deep link');
+    window.location.href = app_store_link;
   },
   onFallback: function() {
      console.log('dialog hidden or user returned to tab');
