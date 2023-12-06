@@ -85,15 +85,14 @@ function DeepLinker(options) {
 
 /* usage */
 
-// var url = 'fb://profile/240995729348595';
-// var badURL = 'lksadjgajsdhfaskd://slkdfs';
+var url = 'com.withcenter.philov.com://';
 
 var linker = new DeepLinker({
   onIgnored: function() {
     console.log('browser failed to respond to the deep link');
   },
   onFallback: function() {
-    console.log('dialog hidden or user returned to tab');
+    url.openURL('https://apps.apple.com/us/app/philov/id1499945979');
   },
   onReturn: function() {
     console.log('user returned to the page from the native app');
