@@ -90,12 +90,12 @@ var result = detect.parse(navigator.userAgent);
 let app_store_link;
 
 if(result.os.family == 'iOS'){
-  app_store_link = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/id1670566885'
+  const link = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/id1670566885'
 
   let linker = new DeepLinker({
   onIgnored: function() {
     console.log('browser failed to respond to the deep link');
-    window.location.href = app_store_link;
+    window.location.href = link;
   },
   onFallback: function() {
      console.log('dialog hidden or user returned to tab');
