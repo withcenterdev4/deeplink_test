@@ -90,7 +90,6 @@ var app_store_link = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/
 var linker = new DeepLinker({
   onIgnored: function() {
     console.log('browser failed to respond to the deep link');
-    // window.location.href = 'https://apps.apple.com/us/app/philov/id1499945970';
   },
   onFallback: function() {
      console.log('dialog hidden or user returned to tab');
