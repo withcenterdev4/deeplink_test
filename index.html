@@ -86,9 +86,20 @@ function DeepLinker(options) {
 /* usage */
 
 
+var result = detect.parse(navigator.userAgent);
+const package_name = 'com.withcenter.philov://';
+let app_store_link;
 
-var package_name = 'com.withcenter.philov://';
-var app_store_link = 'https://play.google.com/store/apps/details?id=com.withcenter.philov';
+if(result.os.family == 'Android'){
+  app_store_link = 'https://play.google.com/store/apps/details?id=com.withcenter.philov';
+
+}else if(result.os.family){
+  app_store_link = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/id1670566885'
+}else{
+  app_store_link = 'https://philov.com'
+
+}
+
 
 var linker = new DeepLinker({
   onIgnored: function() {
