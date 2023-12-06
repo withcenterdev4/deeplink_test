@@ -89,11 +89,11 @@ function DeepLinker(options) {
 var result = detect.parse(navigator.userAgent);
 let app_store_link;
 
-if(result.os.family == 'Android'){
-  app_store_link = 'https://play.google.com/store/apps/details?id=com.withcenter.philov';
-  runLink(app_store_link)
-}else if(result.os.family == 'iOS'){
+if(result.os.family == 'iOS'){
   app_store_link = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/id1670566885'
+  runLink(app_store_link)
+}else if(result.os.family.includes('Android')){
+  app_store_link = 'https://play.google.com/store/apps/details?id=com.withcenter.philov';
   runLink(app_store_link)
 }else{
   window.location.href = 'https://philov.com'
