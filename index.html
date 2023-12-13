@@ -20,6 +20,20 @@
 
 <script>
 let params = new URLSearchParams(location.search);
-console.log(params.get('url'));
+let id = params.get('id');
+
+
+fetch(`https://philgo.web.app/post?id=${id}`)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    document.title = data.title;
+    document.querySelector('meta[name="description"]').setAttribute('content', data.description);
+    document.querySelector('meta[property="og:title"]').setAttribute('content', data.title);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', data.description);
+    document.querySelector('meta[property="og:image"]').setAttribute('content', data.image);
+    document.querySelector('meta[property="og:url"]').setAttribute('content', data.url);
+  });
+
 </script>
 </html>
