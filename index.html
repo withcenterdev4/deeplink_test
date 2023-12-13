@@ -1,143 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-<body style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-  <h1>Loading pleas wait...</h1>
-  <a href="intent://philov.com/#Intent;action=view;package=com.withcenter.philov;S.browser_fallback_url=philov.com;end">philov.com</a>
-  <a href="https://philov.com">link 2 </a>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="This is a description for link test brought you by WithcenterDev4"> 
+  <meta property="og:title" content="Link Preview Test by WithcenterDev4"> 
+  <meta property="og:description" content="this is a Link Preview Test brought you by WithcenterDev4"> 
+  <meta property="og:image" content="https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"> 
+  <meta property="og:url" content="https://philov.com"> 
+  
+</head>
+<body>
+  <h1>hello world!! this is a link preivew!!!</h1>
 </body>
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
-
-<!-- <script>
-
-function DeepLinker(options) {
-  if (!options) {
-    throw new Error('no options')
-  }
-
-  var hasFocus = true;
-  var didHide = false;
-
-  // window is blurred when dialogs are shown
-  function onBlur() {
-    hasFocus = false;
-  };
-
-  // document is hidden when native app is shown or browser is backgrounded
-  function onVisibilityChange(e) {
-    if (e.target.visibilityState === 'hidden') {
-      didHide = true;
-    }
-  };
-
-  // window is focused when dialogs are hidden, or browser comes into view
-  function onFocus() {
-    if (didHide) {
-      if (options.onReturn) {
-        options.onReturn();
-      }
-      didHide = false; // reset
-    } else {
-      // ignore duplicate focus event when returning from native app on
-      // iOS Safari 13.3+
-      if (!hasFocus && options.onFallback) {
-        // wait for app switch transition to fully complete - only then is
-        // 'visibilitychange' fired
-        setTimeout(function() {
-          // if browser was not hidden, the deep link failed
-          if (!didHide) {
-            options.onFallback();
-          }
-        }, 1000);
-      }
-    }
-
-    hasFocus = true;
-  };
-
-  // add/remove event listeners
-  // `mode` can be "add" or "remove"
-  function bindEvents(mode) {
-    [
-      [window, 'blur', onBlur],
-      [document, 'visibilitychange', onVisibilityChange],
-      [window, 'focus', onFocus],
-    ].forEach(function(conf) {
-      conf[0][mode + 'EventListener'](conf[1], conf[2]);
-    });
-  }
-
-  // add event listeners
-  bindEvents('add');
-
-  // expose public API
-  this.destroy = bindEvents.bind(null, 'remove');
-  this.openURL = function(url) {
-    // it can take a while for the dialog to appear
-    var dialogTimeout = 500;
-
-    setTimeout(function() {
-      if (hasFocus && options.onIgnored) {
-        options.onIgnored();
-      }
-    }, dialogTimeout);
-
-    window.location.href = url;
-    
-  };
-}
-
-/* usage */
-
-
-var result = detect.parse(navigator.userAgent);
-
-
-// if(result.os.family == 'iOS'){
-  const app_store_link = 'https://apps.apple.com/us/app/%ED%95%84%EB%9F%AC%EB%B8%8C/id1670566885'
-
-//   var linker = new DeepLinker({
-//   onIgnored: function() {
-//     console.log('browser failed to respond to the deep link');
-    
-//   },
-//   onFallback: function() {
-//      console.log('dialog hidden or user returned to tab');
-//      window.location.href = app_store_link;
-//   },
-//   onReturn: function() {
-//     console.log('user returned to the page from the native app');
-//   },
-  
-// });
-// linker.openURL('com.withcenter.philov://');
-//   // runLink(app_store_link)
-// }else if(result.os.family.includes('Android')){
-
-  // try using // market://details?id=com.withcenter.philov
-//   const play_store_link = 'https://play.google.com/store/apps/details?id=com.withcenter.philov';
-//   runLink(app_store_link)
-// }else{
-//   window.location.href = 'https://philov.com'
-// }
-
-
-  const linker = new DeepLinker({
-  onIgnored: function() {
-    console.log('browser failed to respond to the deep link');
-    window.location.href = app_store_link;
-  },
-  onFallback: function() {
-     console.log('dialog hidden or user returned to tab');
-  },
-  onReturn: function() {
-    console.log('user returned to the page from the native app');
-  },
-  
-});
-linker.openURL('com.withcenter.philov://');
-
-
-
-
-</script> -->
+</html>
